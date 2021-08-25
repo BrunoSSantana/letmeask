@@ -1,13 +1,14 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { auth, firebase } from "../services/firebase";
 
+// informar o formato do dado que será manipulado pelo useState
 type User = {
   id: string;
   name: string;
   avatar: string;
 
 }
-
+// Os dados que serão passados pelo context em "value={}"
 type AuthContextType = {
   user: User | undefined;
   signInWithGoogle: () => Promise<void>;
